@@ -1,5 +1,6 @@
 const net = require("net");
 
+// returns an object that can be used to interact with the server
 const connect = function() {
   const conn = net.createConnection({
     host: '165.227.47.243',
@@ -8,7 +9,7 @@ const connect = function() {
 
   conn.on('connect', () => {
     console.log("Successfully connected to game server");
-    conn.write("Name: PLY");
+    conn.write("Name: JKM");
     // setTimeout(() => {
     //   conn.write("Move: up");
     // }, 50);
