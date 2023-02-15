@@ -8,7 +8,13 @@ const connect = function() {
 
   conn.on('connect', () => {
     console.log("Successfully connected to game server");
-    conn.write("Name: Ju");
+    conn.write("Name: PLY");
+    // setTimeout(() => {
+    //   conn.write("Move: up");
+    // }, 50);
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 50);
   });
 
   conn.on("data", (data) => {
@@ -26,3 +32,4 @@ connect();
 module.exports = {
   connect
 };
+
